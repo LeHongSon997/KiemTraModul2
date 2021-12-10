@@ -12,8 +12,13 @@ public class ContactController {
 
 
     public void showStudent() {
+        int count = 0;
         for (Contact st: contactList) {
             System.out.println(st);
+            count++;
+            if (count%5==0) {
+                return;
+            }
         }
         Validate.checkQuit();
     }
